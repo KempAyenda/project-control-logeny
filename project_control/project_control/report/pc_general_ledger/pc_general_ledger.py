@@ -10,6 +10,7 @@ from functools import reduce
 
 
 def execute(filters=None):
+    return [], []
     general_ledger.get_gl_entries = _get_gl_entries
     col, res = general_ledger.execute(filters)
 
