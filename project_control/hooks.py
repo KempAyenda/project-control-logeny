@@ -62,10 +62,16 @@ doc_events = {
         "after_insert": "project_control.doc_events.project.after_insert"
     },
     "Purchase Invoice": {
-        "validate": "project_control.doc_events.purchase_invoice.validate"
+        "validate": [
+            "project_control.doc_events.purchase_invoice.validate",
+            "project_control.doc_events.update_custom_status.update_custom_status_in_document"
+        ]
     },
     "Purchase Order": {
-        "validate": "project_control.doc_events.purchase_order.validate"
+        "validate": [
+            "project_control.doc_events.purchase_order.validate",
+            "project_control.doc_events.update_custom_status.update_custom_status_in_document"
+        ]
     },
     "Stock Entry": {
         "validate": "project_control.doc_events.stock_entry.validate"
@@ -74,10 +80,28 @@ doc_events = {
         "validate": "project_control.doc_events.expense_claim.validate"
     },
     "Delivery Note": {
-        "validate": "project_control.doc_events.delivery_note.validate"
+        "validate": [
+            "project_control.doc_events.delivery_note.validate",
+            "project_control.doc_events.update_custom_status.update_custom_status_in_document"
+        ]
     },
     "GL Entry": {
         "validate": "project_control.doc_events.gl_entry.validate"
+    },
+    "Sales Order": {
+        "validate": "project_control.doc_events.update_custom_status.update_custom_status_in_document"
+    },
+    "Sales Invoice": {
+        "validate": "project_control.doc_events.update_custom_status.update_custom_status_in_document"
+    },
+    "Purchase Receipt": {
+        "validate": "project_control.doc_events.update_custom_status.update_custom_status_in_document"
+    },
+    "Payment Entry": {
+        "validate": "project_control.doc_events.update_custom_status.update_custom_status_in_document"
+    },
+    "Payment Request": {
+        "validate": "project_control.doc_events.update_custom_status.update_custom_status_in_document"
     }
 }
 
@@ -88,6 +112,10 @@ scheduler_events = {
     "hourly": [
         "project_control.scheduler_events.hourly.set_estimated_gross_margin",
         "project_control.scheduler_events.hourly.set_gross_gratuity"
+    ],
+
+    "all": [
+        "project_control.doc_events.update_custom_status.update_status"
     ]
 }
 # scheduler_events = {
