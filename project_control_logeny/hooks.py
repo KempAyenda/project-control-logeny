@@ -2,8 +2,8 @@
 from __future__ import unicode_literals
 from . import __version__ as app_version
 
-app_name = "project_control"
-app_title = "Project Control"
+app_name = "project_control_logeny"
+app_title = "Project Control Logeny"
 app_publisher = "9T9IT"
 app_description = "An ERPNext app"
 app_icon = "octicon octicon-file-directory"
