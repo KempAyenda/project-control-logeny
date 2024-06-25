@@ -1,4 +1,4 @@
-from project_control.data import validate_project_costing
+from project_control_logeny.data import validate_project_costing
 
 
 def validate(order, method):

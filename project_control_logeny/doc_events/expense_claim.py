@@ -1,4 +1,4 @@
-from project_control.data import validate_project_costing_for_warning
+from project_control_logeny.data import validate_project_costing_for_warning
 
 
 def validate(expense_claim, method):

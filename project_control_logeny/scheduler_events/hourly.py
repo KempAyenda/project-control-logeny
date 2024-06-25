@@ -1,7 +1,7 @@
 import math
 import frappe
 from frappe.utils.data import getdate, nowdate
-from project_control.data import calculate_estimated_gross_margin
+from project_control_logeny.data import calculate_estimated_gross_margin
 
 DAYS_PER_YEAR = 365.0
 

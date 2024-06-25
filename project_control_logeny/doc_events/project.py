@@ -1,7 +1,7 @@
 from functools import reduce
 import frappe
 from frappe import _
-from project_control.data import calculate_estimated_gross_margin
+from project_control_logeny.data import calculate_estimated_gross_margin
 
 
 def validate(project, method):

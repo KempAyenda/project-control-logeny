@@ -5,10 +5,10 @@ from frappe import _
 def get_data():
 	return [
 		{
-			"module_name": "Project Control",
+			"module_name": "Project Control Logeny",
 			"color": "grey",
 			"icon": "octicon octicon-file-directory",
 			"type": "module",
-			"label": _("Project Control")
+			"label": _("Project Control Logeny")
 		}
 	]
